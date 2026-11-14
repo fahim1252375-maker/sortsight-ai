@@ -1,5 +1,7 @@
 # SortSight AI
 
+[![CI](https://github.com/fahim1252375-maker/sortsight-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/fahim1252375-maker/sortsight-ai/actions/workflows/ci.yml) [![CodeQL](https://github.com/fahim1252375-maker/sortsight-ai/actions/workflows/codeql.yml/badge.svg)](https://github.com/fahim1252375-maker/sortsight-ai/actions/workflows/codeql.yml)
+
 **See Waste Differently. Recover More. Waste Less.**
 
 SortSight AI is an international, multi-tenant waste sorting, material recovery, contamination analysis, hazardous waste escalation, smart sorting automation, human-in-the-loop quality assurance, and digital twin simulation SaaS platform engineered for Material Recovery Facilities (MRFs), municipal operators, industrial recyclers, and packaging recovery organizations.
