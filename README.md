@@ -1,119 +1,84 @@
-# SortSight AI
+# Fahim — Full-Stack Developer Portfolio
 
-**See Waste Differently. Recover More. Waste Less.**
+A fast, responsive developer portfolio for **MD. Minhazur Rahman Fahim**, built with semantic HTML, modern CSS, and dependency-free JavaScript.
 
-SortSight AI is an international, multi-tenant waste sorting, material recovery, contamination analysis, hazardous waste escalation, smart sorting automation, human-in-the-loop quality assurance, and digital twin simulation SaaS platform engineered for Material Recovery Facilities (MRFs), municipal operators, industrial recyclers, and packaging recovery organizations.
+**Live portfolio:** [grand-starlight-0c4115.netlify.app](https://grand-starlight-0c4115.netlify.app/)
 
----
+**Source:** [fahim1252375-maker/progree-task-2-portfolio](https://github.com/fahim1252375-maker/progree-task-2-portfolio)
 
-## Problem Statement
+## What the site presents
 
-Modern recycling and material recovery operations face three coupled failure modes:
-1. **Optical-to-Policy Disconnect**: Generic waste classifiers label polymer types without accounting for local or facility-specific acceptance rules, moisture thresholds, or multi-layer laminate restrictions.
-2. **Contamination & Hazard Risk**: Lithium-ion batteries, pressurized aerosols, medical items, and food-soiled fiber cause bale downgrades, thermal runaway fires inside balers/shredders, and operator safety hazards.
-3. **Opaque Closed-Loop Governance**: Facilities lack unified traceability linking AI frame predictions, human-in-the-loop QA corrections, chute sorting rules, active-learning datasets, and modeled recovery capacity.
+- Selected full-stack, applied-AI, civic-tech, and frontend projects
+- Engineering details from BlogSpace, including authentication, ownership checks, rate limiting, and automated regression tests
+- Merged Neo.mjs contributions and an open Microsoft ML-For-Beginners contribution
+- Core technologies, current learning areas, development internships, education, and community involvement
+- Direct contact, GitHub, and LinkedIn links
 
-## Main Capabilities
+## Interface features
 
-- **12-Stage Computer Vision & Material Intelligence Pipeline**: Multi-object localization, segmentation polygons, polymer/substrate classification across 19 material codes (ISO 14021 / EU LoW / Basel references), temperature-scaled confidence calibration ($T = 1.18$), out-of-distribution (`UNKNOWN_OOD`) flagging, policy-decoupled recyclability evaluation, contamination analysis, and automated sorting priority assignment.
-- **Hazardous Waste Escalation**: Visual hazard alerts (`BATT_LI`, `HAZ_CHEM`, `EWASTE_PCB`, sharps, medical flags) with mandatory human-safety disclaimers clarifying that visual AI is never chemical verification.
-- **Global Recycling Intelligence**: Multi-scope rules resolver (`facility -> region -> country -> global taxonomy`) distinguishing curated facility/sample policies from official governmental regulations.
-- **Smart Sorting & Industrial Simulator**: Configurable 8-chute routing rules, conveyor session monitoring, emergency stop controls, and explicitly labeled **SIMULATOR** bridges for OPC-UA/Modbus PLCs, robotic pick coordinates, and overhead GigE/RTSP cameras.
-- **Human-in-the-Loop QA & Continuous Learning**: Escalation queue for predictions `< 0.65` confidence or hazards, audit-logged reviewer overrides, confusion-pair error tracking, and gated promotion into versioned active-learning datasets (`POST /api/v1/models/versions/:id/approve`).
-- **Digital Twin & What-If Optimization Simulator**: Interactive 7-stage MRF twin calculating stage utilization bottlenecks, projected recovery rates, 7-day predictive trajectories, and contamination hotspots (`isSimulation: true`).
-- **Enterprise Security & Multi-Tenancy**: Strict `organization_id` tenant isolation across all queries, 6-role RBAC, bcrypt password hashing, JWT Bearer auth, SHA-256 hashed `x-api-key` access, AES-256-GCM encryption at rest for webhook secrets, Helmet headers, rate limiting, and immutable `audit_logs`.
+- Responsive editorial layout with CSS-built browser-frame project previews
+- Dark and light themes with a locally stored preference
+- Accessible mobile navigation with Escape-to-close and focus management
+- Project category filters with `aria-pressed` state
+- Reading progress indicator and back-to-top control
+- Scroll reveals that respect `prefers-reduced-motion`
+- Keyboard-visible focus styles and a skip-to-content link
+- SEO metadata, Open Graph/Twitter metadata, Person structured data, favicon, sitemap, and crawler instructions
 
-## Architecture Diagram
+## Technology
 
-```
-+-------------------------------------------------------------------------+
-|                    React 19 + TypeScript + Vite SPA                     |
-|   36 Application Interface Areas (Public, Scanner, Twin, Admin, Ops)    |
-|   Tailwind CSS v4 | Recharts | jsPDF Export | i18n (en/sv/de/es/ja)     |
-+-----------------------------------+-------------------------------------+
-                                    | HTTPS / REST JSON (/api/v1/*)
-                                    | JWT Bearer or x-api-key
-+-----------------------------------v-------------------------------------+
-|                Express.js + TypeScript API Server (port 3000)           |
-|  Auth/RBAC/Tenant Middleware | Rate Limiter | Helmet | Audit Logger     |
-|  Routes: auth, detection, sorting, analytics, reviewsModels, opsAdmin   |
-+--------+--------------------+---------------------+---------------------+
-         |                    |                     |
-         v                    v                     v
-+------------------+  +---------------+  +--------------------------------+
-| Vision Pipeline  |  | Digital Twin  |  | Normalized 35-Table SQL DB     |
-| Gemini 4 Hydrogen|  | & Simulator   |  | better-sqlite3 (WAL, FK=ON)    |
-| (server-side key)|  | 7-Stage Model |  | + AES-256-GCM Secret Storage   |
-| + Offline Edge   |  | isSimulation  |  | + Persistent Docker Volume     |
-+------------------+  +---------------+  +--------------------------------+
-```
+- HTML5
+- CSS3 (custom properties, Grid, Flexbox, responsive breakpoints, reduced-motion support)
+- Vanilla JavaScript (ES6+)
+- Git and GitHub
+- Netlify static hosting
 
-## Technology Stack
+No framework, package installation, or build step is required.
 
-- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS v4, Recharts, `lucide-react`, `jspdf`
-- **Backend**: Node.js 22+, Express.js, TypeScript (`tsx server.ts`), Helmet, CORS, `express-rate-limit`, `bcryptjs`, `jsonwebtoken`
-- **AI & ML**: `@google/genai` (`gemini-4-hydrogen`, server-side only) with deterministic `edge_heuristic_fallback` offline mode; standalone Python evaluation & ECE calibration script (`ml/train_eval_reference.py`)
-- **Database**: `better-sqlite3` with normalized relational migrations (`server/db/migrations/001_initial.sql`), foreign keys enabled, WAL journal mode, and persistent Docker-volume storage
-- **Testing & CI**: Vitest integration/unit/E2E suite (`tests/sortsight.test.ts`), GitHub Actions CI workflow (`.github/workflows/ci.yml`)
-
-## Installation & Environment Setup
-
-New users: start with [`START-HERE-BN.md`](./START-HERE-BN.md) for the Bengali setup guide.
+## Run locally
 
 ```bash
-npm install --no-audit --no-fund
-cp .env.example .env
+git clone https://github.com/fahim1252375-maker/progree-task-2-portfolio.git
+cd progree-task-2-portfolio
+python3 -m http.server 8000
 ```
 
-Set variables in `.env` as needed. For production, generate persistent secrets with `openssl rand -hex 32` and set them as `JWT_SECRET` and `ENCRYPTION_KEY` (do not rotate the encryption key without re-encrypting stored secrets):
-- `GEMINI_API_KEY`: Enables cloud `gemini-4-hydrogen` vision & assistant inference (falls back transparently to offline edge heuristics when unset).
-- `JWT_SECRET` & `ENCRYPTION_KEY`: Set stable production secrets (`JWT_SECRET` must be at least 32 characters; `ENCRYPTION_KEY` must be exactly 64 hexadecimal characters). Development mode generates ephemeral keys when unset.
-- `PORT`: Defaults to `3000`.
+Open [http://localhost:8000](http://localhost:8000).
 
-## Database & Model Setup
+## Project structure
 
-- **Automatic Migrations & Demo Seed**: On server startup (`server.ts`), `getDb()` creates `data/sortsight.db` and applies `001_initial.sql`. Core role permissions and the global material taxonomy are initialized in every environment. Development and test environments also seed demo fixtures (`is_demo_data = 1`); production does not seed demo accounts or sample tenants by default. Set `SEED_DEMO_DATA=true` only for an intentional production demo environment.
-- **Cloud Vision Model**: Configure `GEMINI_API_KEY` on the server host.
-- **Python Reference ML Evaluation** (optional standalone check):
-  ```bash
-  python3 ml/train_eval_reference.py
-  ```
-
-## Running Instructions
-
-```bash
-# Development (Express API + Vite SPA on http://localhost:3000)
-npm run dev
-
-# Production build & serve
-npm run build
-NODE_ENV=production npm start
+```text
+.
+├── index.html      # Page structure, SEO metadata, structured data, and content
+├── styles.css      # Design tokens, components, visual previews, and responsive layouts
+├── script.js       # Theme, navigation, filters, progress, and contact interactions
+├── favicon.svg     # Site icon
+├── _headers        # Netlify response security headers
+├── robots.txt      # Search crawler instructions
+├── sitemap.xml     # Canonical portfolio URL
+└── README.md       # Project documentation
 ```
 
-### Demo Credentials (Development / QA Only)
-Seeded demo accounts share `SortSightDemo2026!`:
-- `admin@sortsight.demo` (Admin — Nordic Loop Recovery)
-- `manager@sortsight.demo` (Facility Manager)
-- `operator@sortsight.demo` (Line Operator)
-- `reviewer@sortsight.demo` (QA Reviewer)
-- `analyst@sortsight.demo` (Sustainability Analyst)
+## Deployment
 
-## Testing Instructions
+The site is a static HTML/CSS/JavaScript project. Netlify settings for a Git-connected deployment are:
 
-```bash
-npm test              # Runs Vitest unit, integration, RBAC, tenant-isolation & E2E tests
-npm run lint          # Runs TypeScript compiler check (tsc --noEmit)
-npm run build         # Builds production Vite bundle into dist/
-```
+| Setting | Value |
+| --- | --- |
+| Repository | `fahim1252375-maker/progree-task-2-portfolio` |
+| Production branch | `main` |
+| Build command | Leave blank |
+| Publish directory | `.` |
 
-## Deployment Instructions
+The current Netlify production site was published through a manual Drop deployment. Connect the repository under **Netlify → Project configuration → Build & deploy → Continuous deployment** to publish future changes from GitHub. Keep the production branch as `main`, with no build command and `.` as the publish directory.
 
-1. **Standard Node.js / Full-Stack Build**: Run `npm run build` and `NODE_ENV=production npm start`. See `docs/DEPLOYMENT.md`.
-2. **Docker Compose**: Run `docker compose up --build -d` using the included multi-stage `Dockerfile` and `docker-compose.yml`. The container uses persistent SQLite storage; PostgreSQL is not wired into this application.
+## Engineering takeaways
 
-## Known Limitations
+- A portfolio should make the strongest work easy to understand before asking visitors to inspect a repository.
+- Project status and scope should be clear at a glance: full-stack MVP, applied-AI prototype, civic-tech prototype, or frontend application.
+- Security and maintainability belong in project stories alongside interface design.
+- Accessibility, reduced motion, responsive behavior, and real interactions are part of the implementation rather than decoration.
 
-- Industrial equipment integrations (OPC-UA/Modbus PLC, robotic pick arms, GigE cameras) operate in local **SIMULATOR** mode inside cloud sandboxes.
-- PyTorch GPU fine-tuning and TensorRT Jetson builds run externally via `ml/train_eval_reference.py` rather than inside the Node web container.
-- Email alerts log simulated dispatches unless `SMTP_HOST` and credentials are provisioned.
-- Refer to `docs/LIMITATIONS.md` for complete disclosures.
+## License
+
+MIT. See [LICENSE](LICENSE).
