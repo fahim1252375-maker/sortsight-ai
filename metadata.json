@@ -1,0 +1,6 @@
+{
+  "name": "SortSight AI",
+  "description": "Global AI-powered waste sorting, recycling intelligence, contamination analysis, and material recovery operations platform.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

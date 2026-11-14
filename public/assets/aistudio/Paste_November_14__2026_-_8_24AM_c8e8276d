@@ -1,0 +1,1099 @@
+# MASTER DEVELOPMENT PROMPT
+# SortSight AI — Global AI-Powered Waste Sorting, Recycling Intelligence & Material Recovery Platform
+
+## 1. ROLE & MISSION
+
+Act as a world-class multidisciplinary engineering team consisting of:
+
+- Principal Software Architect
+- Senior Full-Stack Engineer
+- Machine Learning Engineer
+- Computer Vision Research Engineer
+- AI Systems Engineer
+- Data Engineer
+- UI/UX Product Designer
+- DevOps Engineer
+- Cybersecurity Engineer
+- QA Automation Engineer
+- Industrial Automation Integration Engineer
+- Product Strategy Specialist
+
+Your mission is to design, architect, develop, test, document, and deliver **SortSight AI**, an advanced global software platform for intelligent waste identification, recycling optimization, material recovery, contamination analysis, industrial sorting intelligence, and recycling facility management.
+
+This is not a basic waste classification website.
+
+It must be developed as a serious, scalable, professional, production-oriented technology platform.
+
+The project must incorporate ALL 154 mandatory features listed in this specification.
+
+**NON-NEGOTIABLE REQUIREMENT: ALL 154 FEATURES MUST BE INCLUDED. NO FEATURE MAY BE OMITTED, SILENTLY SKIPPED, OR REPLACED WITH AN UNRELATED FEATURE.**
+
+Do not reduce the scope without explicitly documenting a technical limitation and implementing the best possible working alternative.
+
+---
+
+# 2. PRODUCT IDENTITY
+
+**Product name:** SortSight AI
+
+**Product category:** AI-Powered Global Recycling Intelligence Platform
+
+**Tagline:** See Waste Differently. Recover More. Waste Less.
+
+**Mission:**
+
+Transform waste identification, sorting, contamination detection, and material recovery through advanced artificial intelligence, computer vision, operational intelligence, and data-driven recycling optimization.
+
+**Target users:**
+
+1. Recycling companies
+2. Material Recovery Facilities (MRFs)
+3. Municipal waste management organizations
+4. Industrial recycling operators
+5. Waste collection companies
+6. Environmental technology organizations
+7. Packaging recovery organizations
+8. Sustainability and circular economy businesses
+9. Research institutions
+10. Industrial automation providers
+
+The product must be designed for international users rather than being limited to any particular country.
+
+Support configurable country-specific, regional, and facility-specific recycling policies.
+
+---
+
+# 3. MANDATORY FEATURE COMPLETENESS
+
+The following 154 features are the official product requirements.
+
+Maintain their original IDs throughout development.
+
+Create a centralized feature registry and an implementation tracking document named:
+
+`docs/FEATURE_IMPLEMENTATION_MATRIX.md`
+
+Every feature must have:
+
+- Feature ID
+- Exact feature name
+- Description
+- User interface location
+- Backend/API implementation
+- Database requirements
+- Business logic
+- Testing requirements
+- Implementation status
+- Verification evidence
+
+Allowed statuses:
+
+- NOT_STARTED
+- IN_PROGRESS
+- IMPLEMENTED
+- TESTED
+- VERIFIED
+- BLOCKED
+
+Never mark a feature VERIFIED without actual verification.
+
+## CATEGORY 1 — AI WASTE DETECTION & RECOGNITION
+
+Implement all 20 features.
+
+1. Smart Waste Scanner
+2. Real-Time Waste Detection
+3. Multi-Object Detection
+4. AI Material Classification
+5. Fine-Grained Waste Recognition
+6. Plastic Type Recognition
+7. Paper & Cardboard Recognition
+8. Metal Identification
+9. Glass Identification
+10. Textile Waste Recognition
+11. Electronic Waste Recognition
+12. Organic Waste Recognition
+13. Composite Material Recognition
+14. Waste Image Segmentation
+15. Video-Based Waste Detection
+16. Batch Image Analysis
+17. Object Tracking
+18. Detection Confidence Scoring
+19. Unknown Material Detection
+20. AI Detection Explanation
+
+Requirements:
+
+- Support image upload and camera-based input.
+- Implement multi-object detection.
+- Generate bounding boxes and detection labels.
+- Support configurable material categories.
+- Provide confidence scores for every prediction.
+- Support video-frame processing.
+- Provide image segmentation capabilities.
+- Handle unsupported images and unknown objects.
+- Show understandable explanations for predictions.
+- Provide a clear low-confidence warning.
+- Store detection history when the user enables it.
+
+## CATEGORY 2 — INTELLIGENT RECYCLING & MATERIAL ANALYSIS
+
+Implement all 15 features.
+
+21. Recyclability Assessment
+22. Material Recovery Classification
+23. Recycling Compatibility Checker
+24. Material Purity Assessment
+25. Contamination Detection
+26. Cross-Material Contamination Analysis
+27. Food Residue Detection
+28. Packaging Material Analysis
+29. Multi-Layer Packaging Recognition
+30. Recyclable vs Non-Recyclable Classification
+31. Reuse Potential Assessment
+32. Material Separation Recommendations
+33. Recycling Readiness Score
+34. Material Recovery Score
+35. Sorting Priority Recommendation
+
+Requirements:
+
+- Separate material identification from recyclability decisions.
+- Consider facility-specific acceptance rules.
+- Explain why an item is considered recyclable or non-recyclable.
+- Identify visible contamination indicators.
+- Provide configurable material recovery rules.
+- Present recommendations with supporting evidence.
+- Avoid claiming that visual inspection can establish hidden material composition.
+- Make scoring rules transparent and configurable.
+
+## CATEGORY 3 — HAZARDOUS WASTE INTELLIGENCE
+
+Implement all 10 features.
+
+36. Hazardous Waste Detection
+37. Battery Detection
+38. E-Waste Identification
+39. Chemical Container Recognition
+40. Medical Waste Warning
+41. Sharp Object Detection
+42. Lithium Battery Risk Alert
+43. Hazardous Material Warning
+44. Unsafe Disposal Alert
+45. High-Risk Waste Isolation Recommendation
+
+Requirements:
+
+- Detect visible hazardous-item indicators.
+- Clearly display risk warnings.
+- Provide safe handling guidance based on verified information.
+- Escalate uncertain predictions to human review.
+- Never represent an image prediction as chemical verification.
+- Never tell users that a potentially hazardous item is safe solely because of an AI classification.
+
+## CATEGORY 4 — SMART SORTING & AUTOMATION
+
+Implement all 13 features.
+
+46. AI Smart Sorting Engine
+47. Automated Sorting Recommendations
+48. Conveyor Belt Monitoring
+49. Real-Time Sorting Decision Engine
+50. Multi-Category Sorting Rules
+51. Custom Sorting Configuration
+52. Sorting Workflow Management
+53. Rejection Stream Identification
+54. Sorting Accuracy Monitoring
+55. Sorting Performance Optimization
+56. Robotic Sorting Integration API
+57. Industrial Camera Integration
+58. PLC / Automation Integration Interface
+
+Requirements:
+
+- Build a configurable sorting decision engine.
+- Support multiple sorting categories and destinations.
+- Build conveyor monitoring dashboards.
+- Provide simulated real-time sorting.
+- Include configurable automation rules.
+- Implement integration adapters for external industrial equipment.
+- Provide a simulated PLC environment.
+- Provide a documented robotic sorting API.
+- Never claim a physical machine is connected unless a genuine connection has been established.
+
+## CATEGORY 5 — GLOBAL RECYCLING INTELLIGENCE
+
+Implement all 11 features.
+
+59. Global Recycling Rules Engine
+60. Country-Based Recycling Configuration
+61. Region-Specific Material Guidelines
+62. Facility-Specific Recycling Policies
+63. Recycling Facility Directory
+64. Material Acceptance Database
+65. Recycling Compatibility Database
+66. Global Material Classification Standards
+67. Multi-Language Interface
+68. Localized Recycling Instructions
+69. Regional Waste Intelligence
+
+Requirements:
+
+- Build a configurable international rules system.
+- Support multiple countries and regions.
+- Support facility-specific acceptance policies.
+- Implement a searchable facility directory.
+- Track the sources and effective dates of recycling rules.
+- Provide an administrative interface for updating rules.
+- Support internationalization.
+- Begin with English and architect the interface for additional languages.
+- Do not invent official recycling regulations.
+- Clearly distinguish verified rules from administrator-created sample policies.
+
+## CATEGORY 6 — ANALYTICS & PERFORMANCE DASHBOARD
+
+Implement all 16 features.
+
+70. Executive Analytics Dashboard
+71. Waste Composition Analytics
+72. Material Recovery Analytics
+73. Contamination Analytics
+74. Recycling Performance Score
+75. Sorting Accuracy Analytics
+76. Facility Performance Comparison
+77. Waste Volume Tracking
+78. Material Category Statistics
+79. Recovery Rate Monitoring
+80. Waste Stream Analysis
+81. Historical Trend Analysis
+82. Operational Efficiency Analytics
+83. Environmental Impact Estimator
+84. Custom Analytics Reports
+85. PDF / CSV Report Export
+
+Requirements:
+
+- Create professional interactive analytics dashboards.
+- Support date-range filters.
+- Support facility-level filtering.
+- Generate charts and performance indicators.
+- Include historical comparisons.
+- Allow CSV and PDF exports.
+- Provide configurable environmental impact assumptions.
+- Document calculation methods and data sources.
+- Separate measured outcomes from modeled estimates.
+- Never fabricate environmental impact or operational savings.
+
+## CATEGORY 7 — AI OPERATOR ASSISTANT
+
+Implement all 10 features.
+
+86. AI Recycling Assistant
+87. Natural Language Waste Query
+88. Material Identification Assistant
+89. Recycling Recommendation Engine
+90. Contamination Explanation
+91. Sorting Guidance Assistant
+92. Facility Operations Assistant
+93. AI-Powered Report Summarization
+94. Anomaly Explanation
+95. Interactive Knowledge Assistant
+
+Requirements:
+
+- Build an assistant interface.
+- Support natural-language questions.
+- Provide context-aware answers using actual platform data.
+- Connect the assistant to recycling knowledge and facility rules.
+- Include source references when available.
+- Support conversational follow-up questions.
+- Never invent facility statistics or official regulations.
+- Provide an understandable fallback when an AI provider is unavailable.
+
+## CATEGORY 8 — HUMAN-IN-THE-LOOP INTELLIGENCE
+
+Implement all 10 features.
+
+96. Human Review Queue
+97. Low-Confidence Detection Review
+98. Manual Classification Correction
+99. AI Prediction Verification
+100. Operator Feedback Collection
+101. Annotation Management
+102. Dataset Correction Workflow
+103. Model Error Tracking
+104. Expert Review System
+105. Continuous Learning Pipeline
+
+Requirements:
+
+- Create a dedicated review interface.
+- Allow authorized users to correct predictions.
+- Record original and corrected predictions.
+- Maintain reviewer identity and timestamps.
+- Support annotation workflows.
+- Track recurring model errors.
+- Build a controlled model improvement pipeline.
+- Never train or deploy a new model automatically without validation and authorized approval.
+
+## CATEGORY 9 — RECYCLING OPERATIONS MANAGEMENT
+
+Implement all 12 features.
+
+106. Facility Management
+107. Multiple Facility Support
+108. Operator Management
+109. Team & Role Management
+110. Facility Performance Monitoring
+111. Waste Processing Records
+112. Material Inventory Management
+113. Collection Batch Management
+114. Processing History
+115. Operational Alerts
+116. Task Assignment
+117. Facility Activity Logs
+
+Requirements:
+
+- Support multiple organizations and facilities.
+- Provide facility dashboards.
+- Support operators and managers.
+- Implement permission-controlled operations.
+- Track incoming waste batches.
+- Maintain material inventory records.
+- Track processing operations.
+- Create operational alerts.
+- Provide task assignment and activity history.
+
+## CATEGORY 10 — ADVANCED AI & MACHINE LEARNING
+
+Implement all 14 features.
+
+118. Custom AI Model Training
+119. Transfer Learning Pipeline
+120. Model Version Management
+121. Model Performance Evaluation
+122. Model Comparison
+123. Domain Adaptation
+124. Active Learning
+125. Dataset Versioning
+126. Model Drift Detection
+127. Inference Performance Monitoring
+128. Edge AI Inference
+129. Offline Detection Mode
+130. Explainable AI
+131. AI Confidence Calibration
+
+Requirements:
+
+- Create a modular model-management architecture.
+- Support model versions.
+- Record training and evaluation metadata.
+- Support reproducible evaluation.
+- Provide precision, recall, F1-score and confusion matrix reporting.
+- Provide a model comparison interface.
+- Track data and model versions.
+- Support dataset annotation and active-learning workflows.
+- Include drift monitoring.
+- Design edge inference adapters.
+- Provide offline-compatible inference where the selected model and device permit it.
+- Implement confidence calibration and explainability tooling.
+- Do not claim actual training, edge deployment, domain adaptation or drift detection unless it is implemented and tested.
+
+## CATEGORY 11 — PLATFORM, SECURITY & INTEGRATION
+
+Implement all 17 features.
+
+132. User Authentication
+133. Role-Based Access Control
+134. Organization Management
+135. Multi-Tenant Architecture
+136. Secure API Access
+137. API Key Management
+138. Audit Trail
+139. Data Privacy Controls
+140. Encrypted Data Storage
+141. Notification Center
+142. Email Alerts
+143. Webhook Integration
+144. Third-Party Integration API
+145. API Documentation
+146. System Health Monitoring
+147. Automated Backup
+148. Data Export & Import
+
+Requirements:
+
+- Secure authentication and session management.
+- Role-based authorization on frontend and backend.
+- Organization-level data isolation.
+- Secure API key handling.
+- Audit events for sensitive operations.
+- Input validation and rate limiting.
+- Secure file uploads.
+- Encryption in transit and appropriate encryption at rest.
+- Notification preferences.
+- Email integration through configured providers.
+- Webhook signing and delivery logs.
+- Versioned API documentation.
+- Health and readiness endpoints.
+- Backup and restore procedures.
+- Data portability and export controls.
+
+Never expose secret keys, credentials, tokens or internal system configuration to the frontend.
+
+## CATEGORY 12 — SPECIAL COMPETITIVE DIFFERENTIATORS
+
+Implement all 6 features.
+
+149. Recycling Facility Digital Twin
+150. Material Flow Intelligence
+151. Sorting Optimization Simulator
+152. Predictive Sorting Analytics
+153. Precision Recovery Intelligence
+154. Contamination Hotspot Mapping
+
+Requirements:
+
+- Build an interactive virtual facility representation.
+- Visualize material movement through processing stages.
+- Simulate sorting configurations.
+- Compare different optimization scenarios.
+- Support historical operational data for predictive analysis.
+- Identify potential bottlenecks and contamination hotspots.
+- Show assumptions and limitations.
+- Keep simulation results separate from verified real-world results.
+
+---
+
+# 4. REQUIRED TECHNOLOGY ARCHITECTURE
+
+Use the following preferred stack unless the existing repository provides a compelling technical reason to adapt it.
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Accessible component system
+- Recharts for analytics
+- Interactive charts and visualizations
+- Responsive layouts
+
+## Backend
+
+- Python
+- FastAPI
+- Pydantic
+- SQLAlchemy
+- REST API
+- Background task processing where required
+
+## Machine Learning
+
+- Python
+- PyTorch
+- YOLO-compatible object detection architecture
+- OpenCV
+- Appropriate segmentation architecture
+- Scikit-learn for evaluation and analytics
+- Model inference abstraction
+
+## Database
+
+- PostgreSQL
+- SQL migrations
+- Proper relational schema
+- Indexing
+- Data isolation
+- Structured audit history
+
+## Infrastructure
+
+- Docker
+- Environment-based configuration
+- CI/CD
+- Automated testing
+- Structured logs
+- Health checks
+
+The system must use modular architecture rather than placing all business logic inside a single backend file.
+
+---
+
+# 5. REQUIRED APPLICATION INTERFACE
+
+Create a professional global SaaS application with the following main areas:
+
+1. Public Landing Page
+2. Product Overview
+3. Authentication
+4. Organization Onboarding
+5. Main Dashboard
+6. Smart Waste Scanner
+7. Real-Time Detection Studio
+8. Batch Analysis
+9. Material Intelligence Center
+10. Contamination Analysis
+11. Hazard Intelligence Center
+12. Smart Sorting Control Center
+13. Conveyor Monitoring
+14. Global Recycling Intelligence
+15. Country & Region Rules
+16. Facility Directory
+17. Analytics Center
+18. Environmental Impact Estimator
+19. AI Assistant
+20. Human Review Center
+21. Annotation Workspace
+22. Model Management
+23. Dataset Management
+24. Digital Twin
+25. Optimization Simulator
+26. Material Flow Explorer
+27. Facility Operations
+28. Inventory Management
+29. Collection Batch Management
+30. Team Management
+31. Notifications
+32. API & Developer Center
+33. Security & Audit Center
+34. Organization Settings
+35. User Profile
+36. Admin Control Panel
+
+Create dedicated navigation and dashboards for different user roles.
+
+The application must be responsive, accessible, and usable on desktop, tablet and mobile devices.
+
+---
+
+# 6. DESIGN & USER EXPERIENCE REQUIREMENTS
+
+The visual identity should communicate advanced industrial AI, environmental intelligence and professional enterprise software.
+
+Design direction:
+
+- Premium enterprise SaaS aesthetic.
+- Clear and consistent typography.
+- Professional dark and light themes.
+- Excellent information hierarchy.
+- Clean navigation.
+- Balanced whitespace.
+- Consistent spacing.
+- High-quality data visualization.
+- Subtle animations.
+- Accessible color contrast.
+- Meaningful loading states.
+- Meaningful empty states.
+- Useful error states.
+- Responsive data tables.
+- Professional charts and cards.
+
+Avoid:
+
+- Generic AI-generated dashboard appearance.
+- Excessive gradients.
+- Unnecessary decorative animations.
+- Overcrowded layouts.
+- Inconsistent components.
+- Fake statistics.
+- Decorative buttons without actions.
+- Nonfunctional navigation items.
+- Placeholder pages presented as completed features.
+
+All interactive controls must perform their stated actions.
+
+---
+
+# 7. BACKEND & DATABASE REQUIREMENTS
+
+Design normalized database structures for:
+
+- Users
+- Organizations
+- Organization memberships
+- Roles and permissions
+- Facilities
+- Recycling policies
+- Material categories
+- Material acceptance rules
+- Detection records
+- Detection objects
+- AI models
+- Model versions
+- Datasets
+- Dataset annotations
+- Human reviews
+- Contamination records
+- Hazard alerts
+- Sorting configurations
+- Sorting decisions
+- Conveyor sessions
+- Processing batches
+- Material inventory
+- Operations tasks
+- Notifications
+- Audit logs
+- API keys
+- Webhooks
+- Environmental estimates
+- Analytics snapshots
+- Digital twin configurations
+- Simulation scenarios
+- Integration devices
+- Integration events
+
+Requirements:
+
+- Use appropriate foreign keys.
+- Add database indexes.
+- Define constraints.
+- Handle transactional operations.
+- Implement pagination.
+- Implement search and filters.
+- Validate incoming data.
+- Prevent cross-organization data leakage.
+- Maintain consistent timestamps.
+- Create database migrations.
+- Provide seed data clearly marked as DEMO DATA.
+
+---
+
+# 8. COMPUTER VISION & DATASET REQUIREMENTS
+
+Develop a proper computer vision pipeline.
+
+The pipeline should support:
+
+1. Input validation
+2. Image preprocessing
+3. Object detection
+4. Object classification
+5. Segmentation
+6. Confidence estimation
+7. Material categorization
+8. Contamination analysis
+9. Sorting recommendation
+10. Result visualization
+11. Result persistence
+12. Model performance monitoring
+
+Dataset requirements:
+
+- Identify suitable publicly available datasets.
+- Verify dataset licenses and permitted usage.
+- Document dataset provenance.
+- Document class categories.
+- Avoid data leakage between training and test sets.
+- Keep a reproducible evaluation split.
+- Include class imbalance analysis.
+- Include an unknown/out-of-distribution handling strategy.
+- Document dataset limitations.
+
+Do not invent model accuracy.
+
+If pretrained weights are used, document their origin and license.
+
+If a real model cannot be downloaded or run, implement a clear provider abstraction and an explicitly labeled development fallback.
+
+---
+
+# 9. API REQUIREMENTS
+
+Design versioned API endpoints.
+
+Suggested endpoint groups:
+
+- `/api/v1/auth`
+- `/api/v1/users`
+- `/api/v1/organizations`
+- `/api/v1/facilities`
+- `/api/v1/detection`
+- `/api/v1/materials`
+- `/api/v1/recycling`
+- `/api/v1/contamination`
+- `/api/v1/hazards`
+- `/api/v1/sorting`
+- `/api/v1/conveyor`
+- `/api/v1/analytics`
+- `/api/v1/environment`
+- `/api/v1/assistant`
+- `/api/v1/reviews`
+- `/api/v1/annotations`
+- `/api/v1/models`
+- `/api/v1/datasets`
+- `/api/v1/operations`
+- `/api/v1/inventory`
+- `/api/v1/simulations`
+- `/api/v1/digital-twin`
+- `/api/v1/integrations`
+- `/api/v1/notifications`
+- `/api/v1/webhooks`
+- `/api/v1/admin`
+
+Provide:
+
+- OpenAPI documentation
+- Request validation
+- Response schemas
+- Authentication and authorization
+- Consistent error handling
+- Pagination
+- Rate limiting
+- Integration tests
+
+---
+
+# 10. SECURITY REQUIREMENTS
+
+Apply security best practices.
+
+Include:
+
+- Secure authentication
+- Password hashing
+- Session security
+- Role-based access control
+- Tenant isolation
+- Input validation
+- File type and size validation
+- Safe file storage
+- API rate limits
+- CORS restrictions
+- CSRF protection where applicable
+- Secure HTTP headers
+- Secret management
+- Audit logging
+- Secure error responses
+- Backup protection
+- Sensitive data access controls
+
+Never hardcode real credentials.
+
+Provide `.env.example` without real secrets.
+
+Document deployment security requirements.
+
+---
+
+# 11. TESTING & QUALITY ASSURANCE
+
+Testing is mandatory.
+
+Include:
+
+## Backend tests
+
+- Unit tests
+- Integration tests
+- API validation tests
+- Authentication tests
+- Authorization tests
+- Tenant isolation tests
+- Database tests
+- File upload tests
+- Error handling tests
+
+## Frontend tests
+
+- Component tests
+- Form validation tests
+- Navigation tests
+- API integration tests
+- User workflow tests
+- Accessibility checks
+- Responsive layout verification
+
+## AI tests
+
+- Detection pipeline tests
+- Classification tests
+- Dataset validation
+- Confidence threshold tests
+- Evaluation metric tests
+- Unknown-item handling
+- Model version tests
+
+## End-to-end tests
+
+Verify complete workflows:
+
+1. Register a user.
+2. Create an organization.
+3. Create a facility.
+4. Upload a waste image.
+5. Run AI detection.
+6. Review detected objects.
+7. Evaluate recyclability.
+8. Identify contamination indicators.
+9. Generate sorting recommendations.
+10. Save the analysis.
+11. View analytics.
+12. Export a report.
+13. Review a low-confidence prediction.
+14. Correct a classification.
+15. Verify audit history.
+
+Add automated CI workflows.
+
+No feature should be marked VERIFIED without passing its relevant tests or having its external dependency and limitations explicitly documented.
+
+---
+
+# 12. DOCUMENTATION DELIVERABLES
+
+Create:
+
+- `README.md`
+- `docs/PRODUCT_OVERVIEW.md`
+- `docs/SYSTEM_ARCHITECTURE.md`
+- `docs/FEATURE_IMPLEMENTATION_MATRIX.md`
+- `docs/DATABASE_SCHEMA.md`
+- `docs/API_DOCUMENTATION.md`
+- `docs/AI_MODEL_DOCUMENTATION.md`
+- `docs/DATASET_SOURCES.md`
+- `docs/MODEL_EVALUATION.md`
+- `docs/SECURITY.md`
+- `docs/DEPLOYMENT.md`
+- `docs/TESTING.md`
+- `docs/INDUSTRIAL_INTEGRATIONS.md`
+- `docs/ENVIRONMENTAL_IMPACT_METHODOLOGY.md`
+- `docs/LIMITATIONS.md`
+- `docs/DEMO_GUIDE.md`
+- `CONTRIBUTING.md`
+- `.env.example`
+
+The README must include:
+
+- Project overview
+- Problem statement
+- Main capabilities
+- Architecture diagram
+- Technology stack
+- Installation instructions
+- Environment setup
+- Database setup
+- Model setup
+- Running instructions
+- Testing instructions
+- Deployment instructions
+- Screenshots
+- Known limitations
+
+---
+
+# 13. DEVELOPMENT EXECUTION RULES
+
+Follow this development process.
+
+## Step 1 — Repository inspection
+
+Before making changes:
+
+- Inspect the complete repository.
+- Identify the current project structure.
+- Review existing features.
+- Review package dependencies.
+- Inspect environment configuration.
+- Identify existing bugs.
+- Check existing tests.
+- Preserve working functionality.
+
+Do not blindly replace the existing project.
+
+If starting from an empty repository, establish a clean architecture.
+
+## Step 2 — Architecture and planning
+
+Create:
+
+- System architecture
+- Feature dependency map
+- Database design
+- API design
+- UI page map
+- Development milestones
+- 154-feature implementation matrix
+
+Identify dependencies between features.
+
+Do not implement isolated disconnected screens.
+
+## Step 3 — Core implementation
+
+Build the shared authentication, database, organization, facility, API and model infrastructure.
+
+Implement each mandatory feature through actual connected workflows.
+
+## Step 4 — Advanced implementation
+
+Implement analytics, assistant capabilities, human review, operations, integrations, digital twin and optimization features.
+
+## Step 5 — Verification
+
+Run:
+
+- Dependency checks
+- Linting
+- Type checking
+- Unit tests
+- Integration tests
+- End-to-end tests
+- Build verification
+- Security checks
+
+Fix failures rather than concealing them.
+
+## Step 6 — Final audit
+
+Review every feature from ID 1 through ID 154.
+
+Confirm its:
+
+- Frontend availability
+- Backend implementation
+- Data flow
+- Business logic
+- Permissions
+- Error handling
+- Testing evidence
+- Documentation
+
+Generate a final feature completion report.
+
+---
+
+# 14. IMPORTANT NON-NEGOTIABLE RULES
+
+1. All 154 features must remain in scope.
+2. Do not delete features to make the project easier.
+3. Do not silently merge separate feature requirements.
+4. Do not create buttons that do nothing.
+5. Do not use fake AI outputs while claiming real inference.
+6. Do not invent accuracy measurements.
+7. Do not invent customer adoption or environmental impact.
+8. Do not claim hardware integration without actual hardware verification.
+9. Do not expose secrets.
+10. Do not compromise tenant isolation.
+11. Do not implement frontend-only security.
+12. Do not ignore error handling.
+13. Do not leave critical workflows disconnected.
+14. Do not mark unfinished features as completed.
+15. Do not break existing working functionality.
+16. Do not sacrifice maintainability for development speed.
+17. Do not use unlicensed proprietary datasets or model weights.
+18. Do not invent official recycling regulations.
+19. Every important operation must produce traceable results.
+20. Maintain accurate documentation throughout development.
+
+When external services, credentials, hardware, datasets, or infrastructure are unavailable:
+
+- Implement a clean integration interface.
+- Provide a functional local simulator where appropriate.
+- Label the mode clearly.
+- Document setup requirements.
+- Include automated tests for the available implementation.
+- Never claim the unavailable external integration is live.
+
+A simulator is not a substitute for a real physical industrial integration. It must be identified as a simulator.
+
+---
+
+# 15. PROJECT ACCEPTANCE CRITERIA
+
+The final product is acceptable only when:
+
+- All 154 mandatory feature IDs exist in the feature registry.
+- All 154 feature requirements have an implementation or an explicitly documented external-dependency boundary.
+- All implementable features are connected to working application workflows.
+- All critical user journeys work.
+- The main AI detection pipeline works with a real configured model.
+- Material and contamination analysis is explainable.
+- Human review workflows function.
+- Global policy configuration functions.
+- Analytics use actual recorded data or clearly labeled demo data.
+- Organization and facility isolation is tested.
+- Security controls are implemented.
+- The application builds successfully.
+- Automated tests pass.
+- Deployment instructions are reproducible.
+- Documentation is complete.
+- No unresolved critical bugs are concealed.
+
+A list of 154 feature names on a dashboard is NOT implementation.
+
+A collection of static UI mockups is NOT implementation.
+
+A simulated result presented as a verified real-world outcome is NOT implementation.
+
+The objective is to build a genuinely functional platform.
+
+---
+
+# 16. HACKATHON PRESENTATION OBJECTIVE
+
+Prepare SortSight AI for competitive international hackathon evaluation.
+
+The final project must communicate:
+
+**Problem:** Waste sorting and material recovery require better intelligence and operational visibility.
+
+**Solution:** SortSight AI combines computer vision, material intelligence, contamination analysis, facility-specific recycling policies, human verification and operational optimization.
+
+**Innovation:** Integrating AI detection with a configurable industrial sorting system, material flow intelligence and a digital-twin-based optimization environment.
+
+**Technical execution:** Demonstrate real model inference, properly structured APIs, reliable data workflows, automated testing and an explainable decision engine.
+
+**Feasibility:** Show how a recycling facility could adopt the system through a staged integration approach.
+
+**Impact measurement:** Provide transparent operational metrics and clearly labeled environmental estimates.
+
+Create a professional 2–3 minute demonstration plan.
+
+The demo should show actual working functionality, not slides describing planned features.
+
+---
+
+# 17. FINAL RESPONSE FORMAT
+
+When development work is complete, provide:
+
+1. Executive project summary.
+2. Actual implemented architecture.
+3. Technology stack.
+4. All 154 features with verified statuses.
+5. Number of features implemented.
+6. Number of features tested.
+7. Number of features verified.
+8. Features requiring external hardware or credentials.
+9. Test execution results.
+10. Build verification results.
+11. Security findings.
+12. Deployment instructions.
+13. GitHub documentation status.
+14. Known limitations.
+15. Recommended next steps.
+
+Never report 154/154 completed unless the implementation evidence supports that claim.
+
+---
+
+# FINAL COMMAND
+
+Start by inspecting the existing repository and establishing the implementation plan.
+
+Then build SortSight AI systematically.
+
+Treat the 154 numbered features as mandatory requirements, not optional suggestions.
+
+Preserve all feature IDs.
+
+Maintain the feature implementation matrix throughout development.
+
+Build a professional, technically ambitious, globally useful, testable, secure and genuinely functional platform.
+
+**The objective is not merely to create an impressive-looking hackathon website. The objective is to engineer a credible AI-powered recycling intelligence product that can stand up to serious technical evaluation.**
+
+Now begin with repository inspection, architecture planning and the complete 154-feature traceability matrix.
