@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation and setup guide
+    url: https://github.com/fahim1252375-maker/sortsight-ai#readme
+    about: Check the README and Bengali setup guide before opening a support issue.
+  - name: Contribution guidelines
+    url: https://github.com/fahim1252375-maker/sortsight-ai/blob/main/CONTRIBUTING.md
+    about: Read the contribution workflow and engineering standards.
